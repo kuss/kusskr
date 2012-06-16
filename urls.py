@@ -5,6 +5,7 @@ from django.conf.urls.defaults import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    (ur'^blog/$', include('kusskr.apps.blog.urls')),
     # Example:
     # (r'^kusskr/', include('kusskr.foo.urls')),
 
