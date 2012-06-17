@@ -1,11 +1,12 @@
 from django.conf.urls.defaults import *
+from kusskr.apps.blog import views
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^$', views.index),
+    (r'^(\d*)/$', views.index),
     # Example:
     # (r'^kusskr/', include('kusskr.foo.urls')),
 

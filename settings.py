@@ -1,7 +1,7 @@
 # Django settings for kusskr project.
 import os, sys
 
-PROJECT_DIR = os.path.dirname(__file__)
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 j = lambda filename: os.path.join(PROJECT_DIR, filename)
 
 
@@ -84,9 +84,6 @@ ROOT_URLCONF = 'kusskr.urls'
 
 TEMPLATE_DIRS = (
     j('templates')
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute path, not relative paths.
 )
 
 INSTALLED_APPS = (
@@ -96,6 +93,13 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'kusskr',
+    'kusskr.apps.blog',
+    'kusskr.apps.files',
     'django_extensions',
     'django.contrib.admin',
 )
+
+try:
+    from kusskr.settings_local import *
+except ImportError:
+    pass

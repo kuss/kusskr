@@ -3,4 +3,4 @@ from kusskr.apps.blog.models import Article
 
 class Files(models.Model):
     article = models.ForeignKey(Article)
-    file = models.FileField(upload_to='attached_files')
+    _file = models.FileField(upload_to='attached_files')
