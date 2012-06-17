@@ -6,6 +6,7 @@ from kusskr.apps.blog import views
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$', views.index, name="blog-index", kwargs={"page_no": 1}),
     (r'^(\d*)/$', views.index),
     # Example:
     # (r'^kusskr/', include('kusskr.foo.urls')),

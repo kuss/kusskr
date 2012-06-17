@@ -1,0 +1,27 @@
+[
+	{
+		"model": "blog.Blog",
+		"pk": 1,
+		"fields": { "title": "Kuss의 블로그", "url": "http://bit.sparcs.org:12345/blog", "user": 1, "number_of_articles_per_page": 15 }
+	},
+	{
+		"model": "blog.Category",
+		"pk": 1,
+		"fields": { "name": "개발" }
+	},
+	{
+		"model": "blog.Article",
+		"pk": 1,
+		"fields": { "writer": 1, "written_datetime": "2012-06-17 21:50:00", "subject": "이것이 첫 포스트입니다.", "content": "<p>안녕하세요?</p>", "category": 1}
+	},
+	{
+		"model": "blog.Comment",
+		"pk": 1,
+		"fields": { "nickname": "방문자", "content": "힘차고 강한 개발!", "password": "sha1$3da541559918a808c2402bba5012f6c60b27661c", "article": 1 }
+	},
+	{
+		"model": "auth.user",
+		"pk": 1,
+		"fields": { "username": "kuss", "password": "sha1$3da541559918a808c2402bba5012f6c60b27661c", "first_name": "Jaeman", "last_name": "An", "is_staff": true, "is_active": true, "is_superuser": true}
+	}
+]

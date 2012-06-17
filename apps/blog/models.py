@@ -13,7 +13,7 @@ class Blog(models.Model):
 
 class Category(models.Model): 
     name = models.TextField()
-    parent = models.ForeignKey('self')
+    parent = models.ForeignKey('self', null=True)
 
 class Article(models.Model):
     writer = models.ForeignKey(User)

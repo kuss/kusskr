@@ -4,7 +4,7 @@ from django.template import RequestContext
 from kusskr.apps.blog.models import Article, Comment, Category, Blog
 
 def index(request, page_no): 
-    blog = Blog.objects.all()
+    blog = Blog.objects.get()
     title = blog.title
     user = blog.user
     url = blog.url
